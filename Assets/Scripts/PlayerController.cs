@@ -31,8 +31,9 @@ public class PlayerController : MonoBehaviour {
 				Application.Quit ();
 			break;
 		case DeviceType.Handheld:
-			// if (XRSettings.isDeviceActive)
-			if (XRDevice.isPresent) {
+			
+			//if (XRDevice.isPresent) {
+			if (XRSettings.isDeviceActive){
 			} else {
 				// Exit condition for mobile devices
 				if (Input.GetKeyDown (KeyCode.Escape))
@@ -54,8 +55,8 @@ public class PlayerController : MonoBehaviour {
 				moveVertical = Input.GetAxis ("Vertical");
 			break;
 			case DeviceType.Handheld:
-//				if (XRSettings.isDeviceActive)
-				if (XRDevice.isPresent)
+				if (XRSettings.isDeviceActive)
+//				if (XRDevice.isPresent)
 				{
 					moveHorizontal = Input.GetAxis ("Mouse X");
 					moveVertical = Input.GetAxis ("Mouse Y");
